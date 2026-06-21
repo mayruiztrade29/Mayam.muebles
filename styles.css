@@ -370,6 +370,53 @@ a {
   color: #f7f3ea;
 }
 
+.chat-widget {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.chat-toggle {
+  width: 58px;
+  height: 58px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.chat-toggle.active {
+  background: var(--primary-dark);
+}
+
+.chat-panel {
+  display: none;
+  width: min(380px, calc(100vw - 32px));
+  height: 560px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.chat-panel.open {
+  display: block;
+}
+
+.chat-panel iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 @media (max-width: 900px) {
   .hero-content,
   .about-grid,

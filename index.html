@@ -121,11 +121,14 @@
       <form
         class="contact-form"
         name="cotizacion-empresarial"
+        action="https://formsubmit.co/mayam.muebles@gmail.com"
         method="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="cotizacion-empresarial" />
+        <input type="hidden" name="_subject" value="Nueva cotización - Mayam Muebles" />
+        <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="bot-field" />
 
         <div class="form-grid">
@@ -176,7 +179,7 @@
         <ul>
           <li>📍 Bucaramanga, Santander</li>
           <li>📞 +57 313 277 7734</li>
-          <li>✉️ hola@mayammuebles.com</li>
+          <li>✉️ mayam.muebles@gmail.com</li>
         </ul>
       </div>
       <div>
@@ -190,6 +193,19 @@
     </div>
   </footer>
 
+  <div class="chat-widget">
+    <button class="chat-toggle" type="button" aria-label="Abrir chat de ayuda">
+      💬
+    </button>
+    <div class="chat-panel">
+      <iframe
+        src="https://mayamuebles.adeptos.ai/wild/mayamuebles/chat"
+        title="Chat de Mayam Muebles"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+
   <!-- Static skeleton for Netlify Forms build-time detection. Do not remove. -->
   <form name="cotizacion-empresarial" data-netlify="true" netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="cotizacion-empresarial" />
@@ -201,5 +217,17 @@
     <textarea name="descripcion"></textarea>
     <input name="bot-field" />
   </form>
+
+  <script>
+    const chatToggle = document.querySelector('.chat-toggle');
+    const chatPanel = document.querySelector('.chat-panel');
+
+    if (chatToggle && chatPanel) {
+      chatToggle.addEventListener('click', () => {
+        chatPanel.classList.toggle('open');
+        chatToggle.classList.toggle('active');
+      });
+    }
+  </script>
 </body>
 </html>
